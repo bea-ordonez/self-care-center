@@ -90,3 +90,25 @@ body {
     background-image: linear-gradient( to bottom, #134d71 20%, #78a7c6, #f7e4bf 90%);
     background-repeat: no-repeat
     }
+
+   .heart-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 100px;
+   }
+
+   .heart-icon:hover {
+    background-color: rgb(105, 192, 233)
+
+   }
+
+   .favorites-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+   }
+
+   .favorites-icon:hover {
+    background-color: rgb(105, 192, 233)
+
+   }
