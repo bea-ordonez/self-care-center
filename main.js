@@ -5,9 +5,18 @@ var radioMantra = document.querySelector(".radio2")
 var receiveMessageButton = document.querySelector("button")
 var message = document.querySelector(".messageHere")
 var icon = document.querySelector(".icon")
+var heartBtn = document.querySelector(".heart-icon")
+var contentBox = document.querySelector(".content-box")
+var favoritesFolderButton = document.querySelector('.favorites-icon')
+
+
+var favoritedMessages = []
 
 
 receiveMessageButton.addEventListener('click', receiveMessage)
+heartBtn.addEventListener('click', addToFavorites)
+// favoritesFolderButton.addEventListener('click', showFavorites)
+
 
 
 function displayRandomMessage(array) {
@@ -17,11 +26,27 @@ function displayRandomMessage(array) {
 function receiveMessage(){
     if (radioAffirmation.checked){
     message.innerText = affirmations[displayRandomMessage(affirmations)]}
+    icon.classList.add("hidden")
+    heartBtn.classList.remove("hidden")
+    favoritesFolderButton.classList.remove("hidden")
     if (radioMantra.checked){
     message.innerText = mantras[displayRandomMessage(mantras)]
     icon.classList.add("hidden")
+    heartBtn.classList.remove("hidden")
+    favoritesFolderButton.classList.remove("hidden")
     }
 }
+
+function addToFavorites(){
+favoritedMessages.push(message.innerText)
+
+}
+
+// function showFavoritesList(){
+//     message.innerText
+
+// }
+
 
 
 var affirmations = [
