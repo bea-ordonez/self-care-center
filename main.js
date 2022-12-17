@@ -8,6 +8,11 @@ var icon = document.querySelector(".icon")
 var heartBtn = document.querySelector(".heart-icon")
 var contentBox = document.querySelector(".content-box")
 var favoritesFolderButton = document.querySelector('.favorites-icon')
+var homeView = document.querySelector(".home-view")
+var savedFavoritesView = document.querySelector(".view-saved-favorites")
+var homeButton = document.querySelector(".home-button")
+var listOfFavorites = document.querySelector(".list-favorites")
+// var deleteButton = document.querySelector(".delete-button")
 
 
 var favoritedMessages = []
@@ -15,7 +20,9 @@ var favoritedMessages = []
 
 receiveMessageButton.addEventListener('click', receiveMessage)
 heartBtn.addEventListener('click', addToFavorites)
-// favoritesFolderButton.addEventListener('click', showFavorites)
+favoritesFolderButton.addEventListener('click', goToFavorites)
+homeButton.addEventListener('click', goHome)
+// deleteButton.addEventListener('click', deleteMessage)
 
 
 
@@ -39,13 +46,30 @@ function receiveMessage(){
 
 function addToFavorites(){
 favoritedMessages.push(message.innerText)
-
 }
 
-// function showFavoritesList(){
-//     message.innerText
+function goToFavorites(){
+    homeView.classList.add("hidden")
+    savedFavoritesView.classList.remove("hidden")
+    listOfFavorites.innerText = ""
+    for (var i = 0; i < favoritedMessages.length; i++){
+    listOfFavorites.innerHTML += `<p>${favoritedMessages[i]}</p>`
+}
+}
 
-// }
+function goHome(){
+    homeView.classList.remove("hidden")
+    savedFavoritesView.classList.add("hidden")
+}
+
+// function deleteMessage(){
+//   var selectedMessage = event.target
+//   for (var i = 0; i < favoritedMessages.length; i++) {
+//     if (selectedMessage === favoritedMessages[i].innerText) {
+//         favoritedMessages.splice(i, 1)
+//     }
+//   }
+
 
 
 
