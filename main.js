@@ -12,7 +12,8 @@ var homeView = document.querySelector(".home-view")
 var savedFavoritesView = document.querySelector(".view-saved-favorites")
 var homeButton = document.querySelector(".home-button")
 var listOfFavorites = document.querySelector(".list-favorites")
-// var deleteButton = document.querySelector(".delete-button")
+var deleteButton = document.querySelector(".delete-button")
+
 
 
 var favoritedMessages = []
@@ -22,7 +23,7 @@ receiveMessageButton.addEventListener('click', receiveMessage)
 heartBtn.addEventListener('click', addToFavorites)
 favoritesFolderButton.addEventListener('click', goToFavorites)
 homeButton.addEventListener('click', goHome)
-// deleteButton.addEventListener('click', deleteMessage)
+deleteButton.addEventListener('click', deleteMessage)
 
 
 
@@ -53,7 +54,7 @@ function goToFavorites(){
     savedFavoritesView.classList.remove("hidden")
     listOfFavorites.innerText = ""
     for (var i = 0; i < favoritedMessages.length; i++){
-    listOfFavorites.innerHTML += `<p>${favoritedMessages[i]}</p>`
+    listOfFavorites.innerHTML += `<p><input type="checkbox"  class="check-box" id="deletion-box-${i}">${favoritedMessages[i]}</p>`
 }
 }
 
@@ -63,13 +64,25 @@ function goHome(){
 }
 
 // function deleteMessage(){
-//   var selectedMessage = event.target
-//   for (var i = 0; i < favoritedMessages.length; i++) {
-//     if (selectedMessage === favoritedMessages[i].innerText) {
-//         favoritedMessages.splice(i, 1)
+//     for (var i = 0; i < favoritedMessages.length; i++) {
+//         var checkedBox = document.querySelector(`#deletion-box-${i}`)
+//         if (checkedBox.checked){
+//             favoritedMessages.splice(i, i)
+//         }
 //     }
-//   }
+//     listOfFavorites.innerText = ""
+//     for (var i = 0; i < favoritedMessages.length; i++){
+//     listOfFavorites.innerHTML += `<p><input type="checkbox"  class="check-box" id="deletion-box-${i}">${favoritedMessages[i]}</p>`
+//     }
+//  }
 
+
+
+
+//highlight or otherwise "select" message for deletiom
+//set event listener on delete button that removes
+//selected message from favoritedMessages
+//
 
 
 
