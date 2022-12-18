@@ -9,60 +9,58 @@ black - #000000;
 
 html, body {
     height: 100%;
- }
+}
 
- p {
+p {
     color: #ffffff;
     text-align: center;
     font-family: Quicksand;
- }
+}
 
- label {
+label {
     color: #000000;
     font-size: 15px;
     font-family: Quicksand;
     margin-right: 60px;
     margin-left: 100px;
     line-height: 20px;
- }
+}
 
-
-
- .radio1 {
+.radio1 {
     margin-right: auto;
     margin-left: auto;
- }
+}
 
- .radio2 {
+.radio2 {
     margin-right: auto;
     margin-left: auto;
- }
+}
 
- button {
+button {
     color: #ffffff;
     background-color:#134d71;
     margin-left: 175px;
     height: 20px;
     border-radius: 5px;
     width: 150px;
- }
+}
 
- .box{
+.box {
     width: 500px;
     height: 100px;
     border: 1px solid #ffffff;
     margin-left: auto;
-        margin-right: auto;
+    margin-right: auto;
     padding: 700;
     border-radius: 10px;
     background-color:#ffffff;
- }
+}
 
- button:hover {
+button:hover {
     background-color: #EBC3A8;
- }
+}
 
- .icon {
+.icon {
     width: 75px;
     height: 75px;
     margin-left: 360px;
@@ -70,9 +68,9 @@ html, body {
 
 .hidden {
     display: none;
-  }
+}
 
- .content-box {
+.content-box {
     margin-top: 100px;
     box-sizing: content-box;
     width: 800px;
@@ -83,32 +81,41 @@ html, body {
     padding: 25px 25px;
     border-radius: 10px;
     background-color:#ffffff;
- }
- 
+}
 
 body {
     background-image: linear-gradient( to bottom, #134d71 20%, #78a7c6, #f7e4bf 90%);
     background-repeat: no-repeat
-    }
+}
 
-   .heart-icon {
+.heart-icon {
     width: 30px;
     height: 30px;
     margin-left: 100px;
-   }
+}
 
-   .heart-icon:hover {
+.heart-icon:hover {
     background-color: rgb(105, 192, 233)
+}
 
-   }
-
-   .favorites-icon {
+.favorites-icon {
     width: 30px;
     height: 30px;
     margin-left: 5px;
-   }
+}
 
-   .favorites-icon:hover {
+.favorites-icon:hover {
     background-color: rgb(105, 192, 233)
+}
 
-   }
+.home-button {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.delete-button {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
