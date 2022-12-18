@@ -5,30 +5,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <p style="font-size: 30px"><strong>✨Self Care Center✨</strong></p>
-    <br>
-    <br>
-    <form>
-      <p style="font-size: 20px"><strong>Which type of message?</strong></p>
-      <div class="box">
-        <br>
-        <input name="radios" class="radio1" type="radio" id="message1">
-        <label class="option1" for="affirmation"><em>affirmation</em></label>
-        <input name="radios" class="radio2" type="radio" id="message2">
-        <label class="option2"for="mantra"><em>mantra</em></label>
-        <br>
-        <br>
-        <button style="font-family: Quicksand" type="button" class="button">Receive Message
-        </button>
-    </form>
-    </div>
-    <div class="content-box">
-      <img class="icon" src="assets/meditate.svg">
-      <p class="messageHere" style="font-size:20px; color:black"></p>
-      <img name="favorites-icon" class="heart-icon hidden" src="https://cdn-icons-png.flaticon.com/512/4249/4249819.png">
-      <img name="favorites-icon" class="favorites-icon hidden" src="https://cdn-icons-png.flaticon.com/512/9073/9073245.png">
-    </div>
-    </div>
+    <section class="home-view">
+      <p style="font-size: 30px"><strong>✨Self Care Center✨</strong></p>
+      <br>
+      <br>
+      <form>
+        <p style="font-size: 20px"><strong>Which type of message?</strong></p>
+        <div class="box">
+          <br>
+          <input name="radios" class="radio1" type="radio" id="message1">
+          <label class="option1" for="affirmation"><em>affirmation</em></label>
+          <input name="radios" class="radio2" type="radio" id="message2">
+          <label class="option2"for="mantra"><em>mantra</em></label>
+          <br>
+          <br>
+          <button style="font-family: Quicksand" type="button" class="button">Receive Message</button>
+        </div>
+      </form>
+      <div class="content-box">
+        <img class="icon" src="assets/meditate.svg">
+        <p class="messageHere" style="font-size:20px; color:black"></p>
+        <img name="favorites-icon" class="heart-icon hidden" src="https://cdn-icons-png.flaticon.com/512/833/833300.png">
+        <img name="favorites-icon" class="favorites-icon hidden" src="https://cdn-icons-png.flaticon.com/512/9073/9073245.png">
+      </div>
+    </section>
+    <section class = "view-saved-favorites hidden">
+      <img name="house-icon" class="home-button" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png">
+      <img name="delete" class="delete-button" src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png">
+      <p class="list-favorites" style="font-size:20px; color:black"></p>
+    </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

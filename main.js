@@ -1,88 +1,86 @@
 
 
-var radioAffirmation = document.querySelector(".radio1")
-var radioMantra = document.querySelector(".radio2")
-var receiveMessageButton = document.querySelector("button")
-var message = document.querySelector(".messageHere")
-var icon = document.querySelector(".icon")
-var heartBtn = document.querySelector(".heart-icon")
-var contentBox = document.querySelector(".content-box")
-var favoritesFolderButton = document.querySelector('.favorites-icon')
-var homeView = document.querySelector(".home-view")
-var savedFavoritesView = document.querySelector(".view-saved-favorites")
-var homeButton = document.querySelector(".home-button")
-var listOfFavorites = document.querySelector(".list-favorites")
-var deleteButton = document.querySelector(".delete-button")
+var radioAffirmation = document.querySelector(".radio1");
+var radioMantra = document.querySelector(".radio2");
+var receiveMessageButton = document.querySelector("button");
+var message = document.querySelector(".messageHere");
+var icon = document.querySelector(".icon");
+var heartBtn = document.querySelector(".heart-icon");
+var contentBox = document.querySelector(".content-box");
+var favoritesFolderButton = document.querySelector('.favorites-icon');
+var homeView = document.querySelector(".home-view");
+var savedFavoritesView = document.querySelector(".view-saved-favorites");
+var homeButton = document.querySelector(".home-button");
+var listOfFavorites = document.querySelector(".list-favorites");
+var deleteButton = document.querySelector(".delete-button");
 
 
 
-var favoritedMessages = []
+var favoritedMessages = [];
 
 
-receiveMessageButton.addEventListener('click', receiveMessage)
-heartBtn.addEventListener('click', addToFavorites)
-favoritesFolderButton.addEventListener('click', goToFavorites)
-homeButton.addEventListener('click', goHome)
-deleteButton.addEventListener('click', deleteMessage)
+receiveMessageButton.addEventListener('click', receiveMessage);
+heartBtn.addEventListener('click', addToFavorites);
+favoritesFolderButton.addEventListener('click', goToFavorites);
+homeButton.addEventListener('click', goHome);
+deleteButton.addEventListener('click', deleteMessage);
 
 
 
 function displayRandomMessage(array) {
     return Math.floor(Math.random() * array.length);
-  }
+}
 
 function receiveMessage(){
     if (radioAffirmation.checked){
-    message.innerText = affirmations[displayRandomMessage(affirmations)]}
-    icon.classList.add("hidden")
-    heartBtn.classList.remove("hidden")
-    favoritesFolderButton.classList.remove("hidden")
+        message.innerText = affirmations[displayRandomMessage(affirmations)];
+    }
+    icon.classList.add("hidden");
+    heartBtn.classList.remove("hidden");
+    favoritesFolderButton.classList.remove("hidden");
     if (radioMantra.checked){
-    message.innerText = mantras[displayRandomMessage(mantras)]
-    icon.classList.add("hidden")
-    heartBtn.classList.remove("hidden")
-    favoritesFolderButton.classList.remove("hidden")
+        message.innerText = mantras[displayRandomMessage(mantras)];
+        icon.classList.add("hidden");
+        heartBtn.classList.remove("hidden");
+        favoritesFolderButton.classList.remove("hidden");
     }
 }
 
+
 function addToFavorites(){
-favoritedMessages.push(message.innerText)
+    favoritedMessages.push(message.innerText);
 }
 
 function goToFavorites(){
-    homeView.classList.add("hidden")
-    savedFavoritesView.classList.remove("hidden")
-    listOfFavorites.innerText = ""
+    homeView.classList.add("hidden");
+    savedFavoritesView.classList.remove("hidden");
+    listOfFavorites.innerText = "";
     for (var i = 0; i < favoritedMessages.length; i++){
-    listOfFavorites.innerHTML += `<p><input type="checkbox"  class="check-box" id="deletion-box-${i}">${favoritedMessages[i]}</p>`
-}
+        listOfFavorites.innerHTML += `<p><input type="checkbox"  class="check-box" id="deletion-box-${i}">${favoritedMessages[i]}</p>`;
+    }   
 }
 
 function goHome(){
-    homeView.classList.remove("hidden")
-    savedFavoritesView.classList.add("hidden")
+    homeView.classList.remove("hidden");
+    savedFavoritesView.classList.add("hidden");
 }
 
 function deleteMessage(){
     for (var i = 0; i < favoritedMessages.length; i++) {
-        var checkedBox = document.querySelector(`#deletion-box-${i}`)
+        var checkedBox = document.querySelector(`#deletion-box-${i}`);
         if (checkedBox.checked){
-            favoritedMessages.splice(i, i)
+            favoritedMessages.splice(i, 1);
+            i--;
         }
     }
     listOfFavorites.innerText = ""
     for (var i = 0; i < favoritedMessages.length; i++){
-    listOfFavorites.innerHTML += `<p><input type="checkbox"  class="check-box" id="deletion-box-${i}">${favoritedMessages[i]}</p>`
+        listOfFavorites.innerHTML += `<p><input type="checkbox"  class="check-box" id="deletion-box-${i}">${favoritedMessages[i]}</p>`;
     }
- }
+}
 
 
 
-
-//highlight or otherwise "select" message for deletiom
-//set event listener on delete button that removes
-//selected message from favoritedMessages
-//
 
 
 
@@ -100,7 +98,7 @@ var affirmations = [
     "Every day I am getting healthier and stronger.",
     "I honor my body by trusting the signals that it sends me.",
     "I manifest perfect health by making smart choices."
-]
+];
 
 var mantras = [
     "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
@@ -118,8 +116,7 @@ var mantras = [
     "The only constant is change.",
     "Onward and upward.",
     "I am the sky, the rest is weather."
-
-]
+];
 
 
 
