@@ -63,18 +63,18 @@ function goHome(){
     savedFavoritesView.classList.add("hidden")
 }
 
-// function deleteMessage(){
-//     for (var i = 0; i < favoritedMessages.length; i++) {
-//         var checkedBox = document.querySelector(`#deletion-box-${i}`)
-//         if (checkedBox.checked){
-//             favoritedMessages.splice(i, i)
-//         }
-//     }
-//     listOfFavorites.innerText = ""
-//     for (var i = 0; i < favoritedMessages.length; i++){
-//     listOfFavorites.innerHTML += `<p><input type="checkbox"  class="check-box" id="deletion-box-${i}">${favoritedMessages[i]}</p>`
-//     }
-//  }
+function deleteMessage(){
+    for (var i = 0; i < favoritedMessages.length; i++) {
+        var checkedBox = document.querySelector(`#deletion-box-${i}`)
+        if (checkedBox.checked){
+            favoritedMessages.splice(i, i)
+        }
+    }
+    listOfFavorites.innerText = ""
+    for (var i = 0; i < favoritedMessages.length; i++){
+    listOfFavorites.innerHTML += `<p><input type="checkbox"  class="check-box" id="deletion-box-${i}">${favoritedMessages[i]}</p>`
+    }
+ }
 
 
 
