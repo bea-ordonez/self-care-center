@@ -5,7 +5,13 @@
 This project is creating an app to receive a random message (mantra or affirmation) , you can also save them by adding them to a favorites folder or delete them as needed.
 
 ### Installation Instructions:
-They can get the SSH from GitHub and clone to their machine.
+Self Care Center is accessible through [this](https://bea-ordonez.github.io/self-care-center/) website, or locally through the following instructions:
+
+1. Go to this repo on Github
+2. Create New Fork
+3. Copy the SSH URL 
+4. Type Git Clone on the terminal
+5. Open in your text editor
 
 ### Preview of App:
 ![Favorites Page](https://user-images.githubusercontent.com/116661385/208282062-7cdcb951-1fcd-4946-965b-d2cb5dab5339.png)
